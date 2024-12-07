@@ -1,0 +1,279 @@
+/* 공통 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDF4E1;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #6C7A40;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.full-page {
+    display: none;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: #E6F2D9;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #D0D8C0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.full-page:not(.hidden) {
+    display: block;
+}
+
+/* 이전 버튼 */
+.back-button-container {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 100;
+}
+
+.back-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover {
+    transform: scale(1.1);
+}
+
+/* 메인 페이지 */
+.centered-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.center-image {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.main-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.main-button:hover {
+    background-color: #3E8E41;
+}
+
+/* 여행 기간, 지역, 무장애 선택 페이지 */
+.icon {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.icon-image {
+    width: 100px;
+}
+
+.duration-buttons,
+.region-buttons,
+.barrier-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.duration-btn,
+.region-btn,
+.barrier-btn {
+    background-color: #f9f9f9;
+    color: #555;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #D0D8C0;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.duration-btn:hover,
+.region-btn:hover,
+.barrier-btn:hover {
+    background-color: #d9e8c7;
+}
+
+/* 선택된 버튼 색상 */
+.selected-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+/* 4번 페이지: 관광지 리스트 스타일 */
+.select-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.spot-item {
+    background-color: #F3F8E6;
+    border: 2px solid #BCC7A3;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.spot-item:hover {
+    background-color: #d9e8c7;
+}
+
+/* 5번 페이지: 여행 계획 정리 페이지 */
+#sortable {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sortable li {
+    background-color: #F3F8E6;
+    border: 2px solid #BCC7A3;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: move;
+    transition: background-color 0.3s ease;
+}
+
+#sortable li:hover {
+    background-color: #d9e8c7;
+}
+
+/* 여행 이름 입력 필드 스타일 */
+#tripName {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #BCC7A3;
+    border-radius: 8px;
+    background-color: #F3F8E6;
+    color: #6C7A40;
+}
+
+/* 공통 버튼 스타일 */
+.next-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+.next-btn:hover {
+    background-color: #3E8E41;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .center-image {
+        width: 80%;
+    }
+
+    .duration-buttons,
+    .region-buttons,
+    .barrier-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .duration-btn,
+    .region-btn,
+    .barrier-btn {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    #tripName {
+        width: 90%;
+    }
+}
+
+/* 기본 리스트 항목 스타일 */
+.list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* 좌측 정보 섹션 */
+.left-info {
+    display: flex;
+    align-items: center;
+}
+
+/* 아이콘 및 텍스트 섹션 */
+.left-info .icon img {
+    width: 40px;
+    margin-right: 15px;
+}
+
+.left-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-info strong {
+    font-size: 18px;
+    color: #333;
+}
+
+.left-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* 드래그 핸들 섹션 */
+.drag-handle img {
+    width: 20px;
+    cursor: grab;
+}
+
+/* 드래그 중일 때 */
+.list-item.dragging {
+    opacity: 0.5;
+}
